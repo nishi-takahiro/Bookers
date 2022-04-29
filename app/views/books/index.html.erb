@@ -1,2 +1,33 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books</h1>
+<!--投稿一覧、テーブル作成-->
+<table>
+<thead>
+ <tr>
+  <th>Title</th>
+  <th>Body</th>
+  <th></th>
+ </tr>
+</thead>
+
+<tbody>
+   <td>リーダブルコード</td>
+   <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+   <td><%= link_to "Show", "/books/:id" %> 
+       <%= link_to"Edit", "/books/:id/edit" %>
+       <%= Destroy</td>
+   </tbody>
+</table>
+
+<!--新規投稿-->
+
+<%= form_with model: Book.new do |f| %>
+<h2>New book</h2>
+
+<p>Title<br><%= f.text_field :title %></p>
+
+<p>Body<br><%= f.text_area :body %></p>
+
+<br>
+<%= f.submit 'Creat Book' %>
+
+<% end %>
