@@ -10,13 +10,16 @@
 </thead>
 
 <tbody>
-   <td>リーダブルコード</td>
-   <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
-   <td><%= link_to "Show", "/books/:id" %> 
+  <% @books.each do |book| %>
+    <td><%= book.title %></td>
+    <td><%= book.body %></td>
+    <td><%= link_to "Show", "/books/:id" %> 
        <%= link_to"Edit", "/books/:id/edit" %>
-       <%= Destroy</td>
-   </tbody>
+       <%= link_to"Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
+     <% end %>
+ </tbody>
 </table>
+
 
 <!--新規投稿-->
 
