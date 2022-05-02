@@ -10,12 +10,14 @@
 </thead>
 
 <tbody>
-  <% @books.each do |book| %>
-    <td><%= book.title %></td>
-    <td><%= book.body %></td>
-    <td><%= link_to "Show", "/books/:id" %> 
-       <%= link_to"Edit", "/books/:id/edit" %>
-       <%= link_to"Destroy" %></td>
+      <% @books.each do |book| %>
+   　<tr>
+       <td><%= book.title %></td>
+       <td><%= book.body %></td>
+       <td><%= link_to "Show", "/books/id" %> 
+           <%= link_to"Edit", "/books/:id/edit" %>
+           <%= link_to"Destroy" %></td>
+       </tr> 
      <% end %>
  </tbody>
 </table>
