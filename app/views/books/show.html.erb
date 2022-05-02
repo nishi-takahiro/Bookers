@@ -1,3 +1,5 @@
+<!--フラッシュメッセージ-->
+  <%= flash[:notice] %>
 
 <p>
 <strong>Title:</strong> 
@@ -9,4 +11,4 @@
 <%= @book.body %>
 </p>
 
-<p><%= link_to "Edit", "/books/:id/edit" %> | <%= link_to "Back", "/books" %></p>
+<p><%= link_to "Edit", edit_book_path(@book) %> | <%= link_to "Back", "/books" %></p>
