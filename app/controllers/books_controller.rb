@@ -32,12 +32,12 @@ class BooksController < ApplicationController
    else
     render "edit"
    end
- end 
+  end
   
   def destroy
-    @book = Book.find(params[:id])
-    @book.destroy
-    redirect_to books_path(@book), notice: "Book was successfully destroyed."
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to book, notice: "Book was successfully destroyed."
   end
   
   private
