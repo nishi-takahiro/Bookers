@@ -1,3 +1,8 @@
+<!--destroyフラッシュメッセージ-->
+    <% if flash[:notice] %>
+      <P><%= flash[:notice] %></P>
+    <% end %>
+
 <h1>Books</h1>
 <!--投稿一覧、テーブル作成-->
 <table>
